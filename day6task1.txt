@@ -1,0 +1,24 @@
+Task 1
+Make to groups add 3 users in group1 and 5 users in group2 and make directories like in diagram
+Now on directory k group 2 can read write and on directory l group1 can read write and on directory a,b,c,d,e,f,g noone can read write and mkdir should be written only once?
+SOLUTION:
+  #make at Desktop
+  mkdir -p a/b/d/i/l/m a/b/e/h/k/m a/c/f/h/k/m a/c/g/j/k/m
+  groupadd g1
+  usermod -G g1 u1
+  usermod -G g1 u2
+  usermod -G g1 u3
+  groupadd g2
+  usermod -G g2 u4
+  usermod -G g2 u5
+  usermod -G g2 mudit
+  usermod -G g2 mj
+  cd a/b/d/i/l
+   cd ..
+  ls -ld l
+  #changing group of l to g1
+  chgrp g1 l
+  ls -ld l
+...and same procedure for directory k
+
+
